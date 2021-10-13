@@ -1,0 +1,8 @@
+{
+  "name": "TempStorageAACR",
+  "version": "0.0.1",
+  "dependencies": {
+    "@google-cloud/storage": "^5.14.0",
+    "yaml": "^1.10.2"
+  }
+}
