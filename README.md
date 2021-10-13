@@ -28,48 +28,9 @@ The colors in the image and what they represent are as follows:
 - **Orange:** Normal DialogFlow conversation
 - **Blue:** Cloud Function Scripts
 - **Yellow:** Cloud Storage Files
+- **Green:** Control Room components
 
-Webhook Handler
-
-Config FIle
-
-Config Parser
-
-Conversation
-- ![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.001.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.002.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.003.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.004.png)**Green:** Control Room components
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.005.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.005.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.006.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.007.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.008.png)
-
-Authenticate
-
-Backend System
-
-Control Room
-
-Trigger Bot
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.009.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.010.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.011.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.012.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.005.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.013.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.013.png)
-
-Read Callback
-
-Conversation
-
-Write Callback
-
-Conversation
-
-Temp Storage
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.014.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.007.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.015.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.016.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.017.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.018.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.006.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.006.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.019.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.020.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.007.png)
-
+![](Aspose.Words.74ff39fc-8e93-4020-a5a8-098c2fe24508.001.png)
 
 ## Create a conversation
 Although the exact steps to create a conversation will vary depending on each case, you can use the following steps, in general:
@@ -79,7 +40,7 @@ Although the exact steps to create a conversation will vary depending on each ca
 1. Continue the conversation.
 1. (*Optional*) Get bot results.
 
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.021.png)
+![](Aspose.Words.74ff39fc-8e93-4020-a5a8-098c2fe24508.002.png)
 ## Webhook handler
 Webhook handler is the entry point to trigger a cloud function that will either kick off a bot or get the result back. In either case, the process is similar:
 
@@ -109,46 +70,7 @@ $session.params.VARIABLE\_NAME
 ### Push notification of result
 As previously discussed, there is no built-in way to push notifications to the Google built-in chat client currently. However, it is still possible to achieve this by building a custom front-end. The reason for this is that the existing chat client lacks any tracking of Conversation ID, and currently, there is no public, available API to get it. Google does have a private API that can achieve this, to access which you are required to request for authorization.  Conversation ID is available only when a conversation is started initially and must be saved.
 
-Webhook Handler
-
-Config FIle
-
-Config Parser
-
-Conversation
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.022.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.023.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.024.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.025.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.005.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.005.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.006.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.007.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.008.png)
-
-Authenticate
-
-Backend System
-
-Control Room
-
-Trigger Bot
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.026.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.027.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.028.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.029.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.005.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.013.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.013.png)
-
-Callback Push
-
-Conversation
-
-Write Callback
-
-Conversation
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.030.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.007.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.031.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.032.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.033.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.034.png)![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.035.png)
-
-![](Aspose.Words.f6df0344-0483-4526-8908-3c9d5d2d3247.007.png)
-
+![](Aspose.Words.74ff39fc-8e93-4020-a5a8-098c2fe24508.003.png)
 
 You must trigger the following API to be able to receive push notification. Replace anything within double angle brackets (<<>>) with the appropriate value:
 
