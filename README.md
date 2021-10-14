@@ -161,21 +161,16 @@ Some files are stored in cloud storage and need to be read or written to.
 This file contains your Control Room credentials and bot triggering information. You must fill it out before triggering. Each conversation should have its config file so a different bot configuration can be used. The config file could be specified in the AuthenticateAACR and TriggerBotAACR cloud function.
 
 The format is as follows
-
-`              `--
-
+```
+---
 aa-cr:
-
-`  `url: <http://1.1.1.1/>
-
-`  `username: automation-runner
-
-`  `password: abc123!@#
-
-`  `botId: 1234
-
-`                `runAsUserId: 12
-`                `returns: result1,result2
+  url: http://1.1.1.1/
+  username: myUser
+  password: myPass
+  botId: 1234
+  runAsUserId: 12
+  returns: result1,result2
+```
 
 Here is a brief explanation of what each variable does:
 
