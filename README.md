@@ -30,7 +30,7 @@ The colors in the image and what they represent are as follows:
 - **Yellow:** Cloud Storage Files
 - **Green:** Control Room components
 
-![](Aspose.Words.74ff39fc-8e93-4020-a5a8-098c2fe24508.001.png)
+![](img1.png)
 
 ## Create a conversation
 Although the exact steps to create a conversation will vary depending on each case, you can use the following steps, in general:
@@ -40,7 +40,7 @@ Although the exact steps to create a conversation will vary depending on each ca
 1. Continue the conversation.
 1. (*Optional*) Get bot results.
 
-![](Aspose.Words.74ff39fc-8e93-4020-a5a8-098c2fe24508.002.png)
+![](img2.png)
 ## Webhook handler
 Webhook handler is the entry point to trigger a cloud function that will either kick off a bot or get the result back. In either case, the process is similar:
 
@@ -70,7 +70,7 @@ $session.params.VARIABLE\_NAME
 ### Push notification of result
 As previously discussed, there is no built-in way to push notifications to the Google built-in chat client currently. However, it is still possible to achieve this by building a custom front-end. The reason for this is that the existing chat client lacks any tracking of Conversation ID, and currently, there is no public, available API to get it. Google does have a private API that can achieve this, to access which you are required to request for authorization.  Conversation ID is available only when a conversation is started initially and must be saved.
 
-![](Aspose.Words.74ff39fc-8e93-4020-a5a8-098c2fe24508.003.png)
+![](img3.png)
 
 You must trigger the following API to be able to receive push notification. Replace anything within double angle brackets (<<>>) with the appropriate value:
 
@@ -187,24 +187,24 @@ Perform the following steps to set up a ready-to-use environment.
 
 1. Create a new project in GCP.
 1. Set up a service account and give it access to Dialogflow API and Cloud Storage API.
-1. Download key.json for service account.
+1. Download key.json for the service account.
 1. Download the repository in Github.
 1. Import the DialogFlow conversation into your DialogFlow CX project.
 1. Import the demo bot into your CR.
 1. Import each Cloud Function into Cloud Function.
-1. Copy key.json into each cloud function
+1. Copy key.json into each cloud function.
 1. Import config.json into your Google Cloud Storage account.
    1. Modify it with your CR URL, username, and password.
    1. Modify it with your RunAsUserID.
    1. Modify it with your BotID.
    1. Modify the results line so that it matches the name of your bot output variables.
-1. Modify configPath in ConfigParserAACR to point to your config file
-1. Create the temp storage file in your Cloud Storage
-   1. Modify storagePath in TempStorageAACR to point to your temp storage
+1. Modify configPath in ConfigParserAACR to point to your config file.
+1. Create the temp storage file in your Cloud Storage.
+1. Modify storagePath in TempStorageAACR to point to your temp storage.
 1. Modify the following information in each Cloud Function:
    1. The project id
-   1. The Cloud Function end point
-1. Test and run the dialog
+   1. The Cloud Function endpoint
+1. Test and run the dialog.
 # Development tips
 ## How to test and debug
 Google provides a few levels of testing, and we recommend that testing be done in the following order:
@@ -221,12 +221,12 @@ Conversations can be tested in a front end of your choice. Here are some tips to
 1. Use Console.log liberally to test the handler scripts.
 1. Use the log to check the status of the scripts and receive errors.
 ### Test the cloud function
-The Cloud function can be tested like any other REST API endpoint, using postman or a testing framework, or by directly calling it in your browser. 
+The Cloud function can be tested like any other REST API endpoint using postman or a testing framework or by directly calling it in your browser. 
 ## How to view log
 There are a few levels of logging.
 
 Logging for cloud functions is built in and can be accessed in the Logs tab. Use console.log to write to the log.
 
-Conversations can be logged in Google Stackdriver, which can provide more detailed conversation information. Enable this in Agent Settings by selecting the  **Enable stackdriver logging** check box under **Logging Settings**.
+Conversations can be logged in Google Stackdriver, which can provide more detailed conversation information. Enable this in Agent Settings by selecting the **Enable stackdriver logging** check box under **Logging Settings**.
 # Question & Answer
 ## Common Problems
