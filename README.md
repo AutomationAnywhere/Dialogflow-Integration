@@ -28,7 +28,9 @@ The colors in the image and what they represent are as follows:
 - **Orange:** Normal DialogFlow conversation
 - **Blue:** Cloud Function Scripts
 - **Yellow:** Cloud Storage Files
-- **Green:** Control Room components
+- **Green:** Control Room and 3rd party external components
+
+When an user start an **Conversation** within DialogFlow, information will be gathered from them. When a bot is ready to be triggered, a **Webhook Hanlder** will be called to start the process of triggering the bot.  Configuration will be read and authentication to **Control Room** will be made.  When everything is ready the bot will be **Triggered**.  When the bot is finished the results will be saved in a **Temp Storage** which can then be **Read** by the **Conversation** when called on.
 
 ![](img1.png)
 
