@@ -70,7 +70,7 @@ If your scenario requires getting the bot results back, it must be triggered fro
 
 $session.params.VARIABLE\_NAME
 ### Push notification of result
-As previously discussed, there is no built-in way to push notifications to the Google built-in chat client currently. However, it is still possible to achieve this by building a custom chat client. With custom chat client, the chat server would be able to facilitate the conversation using the following APIs and the Conversation ID is available only when a conversation is started initially and must be saved via this process.
+As previously discussed, there is no built-in way to push notifications to the Google built-in chat client currently. However, it is still possible to achieve this by building a custom chat management system. With custom chat management system, the chat server would be able to facilitate the conversation using the following APIs and the Conversation ID is available only when a conversation is started initially and must be saved via this process.  The chat server would be able to push the notification message to the client.
 
 ![](img3.png)
 
