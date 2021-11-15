@@ -70,11 +70,13 @@ If your scenario requires getting the bot results back, it must be triggered fro
 
 $session.params.VARIABLE\_NAME
 ### Push notification of result
-As previously discussed, there is no built-in way to push notifications to the Google built-in chat client currently. However, it is still possible to achieve this by building a custom front-end. The reason for this is that the existing chat client lacks any tracking of Conversation ID, and currently, there is no public, available API to get it. Google does have a private API that can achieve this, to access which you are required to request for authorization.  Conversation ID is available only when a conversation is started initially and must be saved.
+As previously discussed, there is no built-in way to push notifications to the Google built-in chat client currently. However, it is still possible to achieve this by building a custom chat client. With custom chat client, the chat server would be able to facilitate the conversation using the following APIs and the Conversation ID is available only when a conversation is started initially and must be saved via this process.
 
 ![](img3.png)
 
 You must trigger the following API to be able to receive push notification. Replace anything within double angle brackets (<<>>) with the appropriate value:
+
+The following APIs will work with DialogFlow ES and CX.
 
 1. **Create a conversation profile:**  Trigger this API just once and save the Conversation Profile ID in a config file.
    - Use the following endpoint: [https://us-central1-dialogflow.googleapis.com/v2beta1/projects/<<Project_ID>>/locations/<<Location>>/conversationProfiles](https://us-central1-dialogflow.googleapis.com/v2beta1/projects/%3c%3cProject_ID%3e%3e/locations/%3c%3cLocation%3e%3e/conversationProfiles)
